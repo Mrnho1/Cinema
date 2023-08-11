@@ -1,0 +1,25 @@
+@import '../app.component.scss';
+
+
+section{
+    background-color: $fundo;
+    .container{
+        width: 1140px;
+        display: block;
+        margin: auto;
+        h2{
+            font-family: $fonte-secundaria;
+            padding-top: 12px;
+            color: $branco;
+        }
+        p{
+            font-family: $fonte-principal;
+            color: $branco;
+        }
+        img{
+            margin: auto;
+            width: 100%;
+            height: 700px;
+        }
+    }
+}

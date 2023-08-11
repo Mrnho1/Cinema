@@ -1,0 +1,38 @@
+@import "../app.component.scss";
+
+mat-toolbar {
+    background-color: #151b26;
+    color: white;
+    .container {
+        width: 1140px;
+        display: flex;
+        margin: auto;
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #2962ff;
+            padding-top: 15px; 
+        }
+        .menu-spacer {
+            flex: 1 1 auto;
+        }
+        button {
+            margin: auto;
+            border: none;
+            background-color: $fundo;
+            color: #ffffff;
+            margin-left: 10px;
+            &:hover{
+                color: #2962ff;
+            }
+        }
+        input{
+            height: 20px;
+            margin: auto;
+            padding: 5px;
+            border-radius: 18px;
+        }
+    
+    }
+}
+
