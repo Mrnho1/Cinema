@@ -1,2 +1,120 @@
 <app-carousel></app-carousel>
-<p>home works!</p>
+<main>
+    <div class="linha">
+        <h2>Favoritos</h2>
+        <div class="linha-filmes">
+            <div class="filme principal" *ngFor="let filme of filmes; let i = index" >
+                <div *ngIf="filme.favorito === true">
+                    <img src="{{filme.foto}}" alt="{{filme.titulo}}" >
+                <button
+                [class]="
+                  filme.favorito === false ? 'favorite' : 'favorite-check'
+                "
+                [title]="
+                  filme.favorito === false
+                    ? 'Adicionar aos favoritos'
+                    : 'Remover dos favoritos'
+                "
+                mat-button
+                (click)="toogleFavorito(i)"
+              >
+                <span>
+                  <mat-icon
+                    aria-hidden="false"
+                    aria-label="Example home icon"
+                    fontIcon="favorite"
+                  ></mat-icon>
+                </span>
+              </button>
+              <button (click)="openDialog()">
+                Detalhes
+              </button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="linha">
+        <h2>Lançamentos</h2>
+        <div class="linha-filmes" >
+            <div class="filme" *ngFor="let filme of filmes; let i = index">
+                <img src="{{filme.foto}}" alt="{{filme.titulo}}">
+                <a
+              [class]="
+                filme.favorito === false ? 'favorite' : 'favorite-check'
+              "
+              [title]="
+                filme.favorito === false
+                  ? 'Adicionar aos favoritos'
+                  : 'Remover dos favoritos'
+              "
+              mat-button
+              (click)="toogleFavorito(i)"
+            >
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="favorite"
+              ></mat-icon>
+          </a>
+          <button>
+            Detalhes
+          </button>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <div class="linha">
+        <h2>Exclusivos</h2>
+        <div class="linha-filmes" >
+            <div class="filme" *ngFor="let filme of filmes; let i = index">
+                <img src="{{filme.foto}}" alt="{{filme.titulo}}">
+                <a
+              [class]="
+                filme.favorito === false ? 'favorite' : 'favorite-check'
+              "
+              [title]="
+                filme.favorito === false
+                  ? 'Adicionar aos favoritos'
+                  : 'Remover dos favoritos'
+              "
+              mat-button
+              (click)="toogleFavorito(i)"
+            >
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="favorite"
+              ></mat-icon>
+          </a>
+            </div>
+        </div>
+    </div>
+    <div class="linha">
+        <h2>Em Alta</h2>
+        <div class="linha-filmes" >
+            <div class="filme" *ngFor="let filme of filmes; let i = index">
+                <img src="{{filme.foto}}" alt="{{filme.titulo}}">
+                <a
+              [class]="
+                filme.favorito === false ? 'favorite' : 'favorite-check'
+              "
+              [title]="
+                filme.favorito === false
+                  ? 'Adicionar aos favoritos'
+                  : 'Remover dos favoritos'
+              "
+              mat-button
+              (click)="toogleFavorito(i)"
+            >
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="favorite"
+              ></mat-icon>
+          </a>
+            </div>
+        </div>
+    </div> -->
+</main>
